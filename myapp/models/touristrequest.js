@@ -11,8 +11,8 @@ var touristrequestSchema = new Schema({
 	date: Date,
 	hasCar: Boolean,
 	city: String,
-	latitude: Number,
-	longitude: Number,
+	//latitude: Number,
+	//longitude: Number,
 	submitdate: Date,
 	expired:Boolean,
 	matched:Boolean
