@@ -1,9 +1,4 @@
 language: node_js
 node_js:
         - "0.12"
-services:
-        - mongodb
-before_script:
-        - sleep 15
-        - mongo appDB --eval 'db.addUser("cornell", "tech");'
-script: cd test && mocha
+
