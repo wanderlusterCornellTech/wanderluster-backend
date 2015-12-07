@@ -50,6 +50,14 @@ router.post('/register/:username/:password', function(req, res){
 
 });
 
+router.delete('/registertest/:username', function(req,res){
+	profiles.remove({username: req.params.username}, function(err, res){
+		if (err) {
+			return res.send(err);
+		}
+	});
+});
+
 router.get('/login/:username/:password', function(req,res){
 	profiles.find({username: req.params.username, password: req.params.password}).count(function(err, profilecount){
 		if (err) {

@@ -3,7 +3,7 @@ var should = require("should");
 
 describe("SAMPLE unit test",function(){
 
-		var url = 'http://localhost:80';
+		var url = 'http://54.86.181.199:80';
 		// #1 should return home page
 		var body = {};
 		it('Login Success', function(done){
@@ -45,13 +45,22 @@ describe("SAMPLE unit test",function(){
 					throw err;
 					}
 					res.body.message.should.equal('Success!')
-					done();
+					done()
 					});
+				request(url)
+				.delete('/api/registertest/abcd')
+				.send(body)
+				.expect(200)
+				.end(function(err,res) {
+					if (err) {
+					throw err;
+					}
+				});
 			});
 		
 		it('Register Fail', function(done){
 				request(url)
-				.post('/api/register/lx123/123456')
+				.post('/api/register/lx98/123456')
 				.send(body)
 				.expect(200) //Status code
 				.end(function(err,res) {
