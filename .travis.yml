@@ -5,5 +5,5 @@ services:
         - mongodb
 before_script:
         - sleep 15
-        - mongo mydb_test --eval 'db.addUser("cornell", "tech");'
+        - mongo appDB --eval 'db.addUser("cornell", "tech");'
 script: cd test && mocha
