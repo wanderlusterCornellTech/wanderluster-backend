@@ -35,7 +35,7 @@ describe("SAMPLE unit test",function(){
 						});
 				});
 		
-		/**it('Register Success', function(done) {
+		it('Register Success', function(done) {
 				request(url)
 				.post('/api/register/abcd/123456')
 				.send(body)
@@ -47,7 +47,6 @@ describe("SAMPLE unit test",function(){
 					res.body.message.should.equal('Success!')
 					done()
 					});
-<<<<<<< HEAD
 				request(url)
 				.delete('/api/registertest/abcd')
 				.send(body)
@@ -58,9 +57,6 @@ describe("SAMPLE unit test",function(){
 					}
 				});
 			});
-=======
-			});**/
->>>>>>> origin/master
 		
 		it('Register Fail', function(done){
 				request(url)
