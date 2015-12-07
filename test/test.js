@@ -3,7 +3,7 @@ var should = require("should");
 
 describe("SAMPLE unit test",function(){
 
-		var url = 'http://localhost:80';
+		var url = 'http://54.86.181.199:80';
 		// #1 should return home page
 		var body = {};
 		it('Login Success', function(done){
