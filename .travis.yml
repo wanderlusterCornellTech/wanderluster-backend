@@ -4,5 +4,7 @@ node_js:
 services:
         - mongodb
 before_script:
-  - mongo appDB --eval 'db.addUser("cornell", "tech");'
+        - mongo appDB --eval 'db.addUser("cornell", "tech");'
+        - npm install -g mocha
+script: cd test && mocha
 
